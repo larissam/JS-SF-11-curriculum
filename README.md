@@ -1,5 +1,5 @@
 # Student Resources
-## General Assembly San Francisco JavaScript Development 10 
+## General Assembly San Francisco JavaScript Development 11
 
 - Monday, February 5 - Monday, April 16
 
