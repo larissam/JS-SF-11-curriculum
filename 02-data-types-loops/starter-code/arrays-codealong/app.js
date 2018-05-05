@@ -3,11 +3,18 @@
 // ____________________________________________________________________________
 
 
+console.log('SECTION 1 - Arrays');
 // Create an array of your favorite foods
+let foods = ['tacos', 'sushi', 'coffee'];
 
-// Access the first item in the array
+// Log out the first item in the array
+console.log(foods[0]);
 
-// Access the last item in the array
+// Log out the length of the array
+console.log(foods.length);
+
+// Log out the last item in the array
+console.log(foods[foods.length - 1]);
 
 
 // ____________________________________________________________________________
@@ -21,17 +28,30 @@
 // unshift(item1, item2, ... , itemN)
 // shift()
 
+console.log('SECTION 2 - Array methods');
 // Pretend we're a pet store. 
 // Create an array of pets we are going to sell: cat, dog, hamster, guinea pig
+let pets = ['cat', 'dog', 'hamster', 'guinea pig'];
 
-// Add a pet to the end of the list
+// Add 'lizard' to the end of the list
+// Log out the array to confirm it was added
+pets.push('lizard');
+console.log('pets after adding lizard: ', pets);
 
-// Remove a pet from end of the list the list
+// Add 'turtle' to the beginning of the list
+// Log out the array to confirm it was added
+pets.unshift('turtle');
+console.log('pets after adding turtle: ', pets);
 
-// Add a pet to the beginning of the list
+// Remove the first pet from the list (the turtle)
+// Log out the array to confirm it was removed
+pets.shift();
+console.log('pets after removing first pet: ', pets);
 
-// Remove a pet from the beginning of the list
-
+// Remove the last pet from the list (the lizard)
+// Log out the array to confirm it was removed
+pets.pop();
+console.log('pets after removing last pet: ', pets);
 
 
 // ____________________________________________________________________________
@@ -44,6 +64,9 @@
 // every()
 // some()
 
-// Go through the list of pets we created in part 2 and log each to the console
+console.log('SECTION 3 - Array iterator methods');
 
-// Log out all the pets except for the dog
+// Go through the list of pets we created in part 2 and log each to the console
+pets.forEach(function(pet) {
+    console.log(pet);
+});
