@@ -3,9 +3,13 @@
 
 // $()
 
-// how do we select the h1?
-// how do we select the lis?
-// how do we select the red li?
+// 1. select the h1
+// 2. select the li elements
+// 3. select the li element that's red (view index.html in the browser!)
+
+
+
+
 
 
 // PART 2: GET AND SET CONTENT
@@ -16,10 +20,16 @@
 // .addClass()
 // .removeClass()
 
-// let's change the text of the h1
-// lets set the img src to be 'images/moto.jpg'
+// 1. change the text of the h1
+// 2. set the img src to be 'images/moto.jpg'
+// 3. remove the 'special' class from the second li
+// 4. BONUS: add the 'special' class to the first li
 
-// let's add the 'special' class to the first li and remove it from the second
+
+
+
+
+
 
 
 // PART 3: EFFECTS/ANIMATION 
@@ -33,6 +43,12 @@
 // .slideDown()
 // .slideToggle()
 
-// let's hide the img
+// 1. hide the img
+
+
+
+
+
+
 
 

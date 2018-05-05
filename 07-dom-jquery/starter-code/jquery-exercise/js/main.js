@@ -9,8 +9,10 @@
 */
 
 // 1. Remove the 'highlight' class from element with id 'box2' (use the .removeClass() method)
-
 // 2. Select the anchor within the element with id 'box3'. Change the HTML to 'jQuery!'
+
+
+
 
 
 /**
@@ -18,8 +20,9 @@
 */
 
 // 1. Add the 'highlight' class to the element with id 'box4' (use the .addClass() method)
-
 // 2. Select the p element within the footer element. Change the HTML to 'jQuery syntax is simpler!'
+
+
 
 
 
@@ -38,6 +41,10 @@
 	// b) Fade out the element with id 'box1' slowly
 
 
+
+
+
+
 /**
 *
 * Part 2b:
@@ -47,3 +54,6 @@
 // 1. When the h2 is clicked on
 	// a) Slide up the h2
 	// b) Add the snazzy class to the h1
+
+
+
