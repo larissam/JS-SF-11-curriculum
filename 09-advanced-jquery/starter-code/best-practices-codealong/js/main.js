@@ -15,31 +15,36 @@ $(function() {
   const $buttons = $('#animalsList li');
   const $images = $('.image');
 
-  $buttons.each(function() {
-    $(this).on('click', function(event) {
-      const animal = event.target.id;
-      event.target.className = 'showing';
-      const $newTile = $('<div>');
-      $newTile.addClass('image');
-      const $newImage = $('<img>');
-      $newImage.attr('src', images[animal]);
-      $newImage.addClass('animal');
-      const $caption = $('<p>');
-      const $captionText = $caption.text(animal);
-      $caption.append($captionText);
-      $newTile.append($caption);
-      $newTile.append($newImage);
-      $gallery.append($newTile);
-    });
-  });
+  // 1. use chaining
+  $buttons.on('click', function(){
+    const $animal = $(this);
+    const id = $animal.attr('id');
 
-  $images.each(function() {
-    $(this).on('mouseenter', function(event) {
-      $(this).addClass('active');
-      $(this).siblings().removeClass('active');
-    });
-    $(this).on('mouseleave', function(event) {
-      $(this).removeClass('active');
-    });
+    $animal.addClass('showing');
+
+    const $newTile = $('<div>');
+    $newTile.addClass('image');
+
+    const $newImage = $('<img>');
+    $newImage.attr('src', images[id]);
+    $newImage.addClass('animal');
+
+    const $caption = $('<p>');
+    const $captionText = $caption.text(id);
+    $caption.append($captionText);
+
+    $newTile.append($caption);
+    $newTile.append($newImage);
+    $gallery.append($newTile);
+  })
+
+  // 1. use event delegation so these handlers are attached to programmatically created images
+  // 2. combine handlers
+  $images.on('mouseenter', function() {
+    $(this).addClass('active');
+    $(this).siblings().removeClass('active');
+  });
+  $images.on('mouseleave', function() {
+    $(this).removeClass('active');
   });
 });
