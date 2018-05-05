@@ -8,12 +8,16 @@
   //    new Date()
   //    (Note: This code uses the Date object to fetch the current date and time.)
 
-function logDate() {
+
+// 2. Call the function
+// BONUS: Use jQuery to put the value of new Date() in the p with id "date"
+
+function logDate(){
   console.log(new Date());
 }
-// 2. Call the function
-
 logDate();
+
+
 
 // -------------------------------------------------------------------------------
 // Part 2 - Predicting outcomes
@@ -21,33 +25,34 @@ logDate();
 
 // ---- A ------
 
-// Look at the below function. Predict what will happen when the function is called.
+// Look at the below function. Predict what will happen when you uncomment the code.
+// Uncomment the code - what gets logged to the console?
+// BONUS: Use jQuery to show the img with class "hot" or "not-hot" based on the value of temp
 
-function hotOrNot (temp) {
-	if (temp > 75) {
-		console.log("It's so hot!");
-	} else {
-		console.log("It's not hot.");
-	}
-}
+// function hotOrNot (temp) {
+// 	if (temp > 75) {
+// 		console.log("It's so hot!");
+// 	} else {
+// 		console.log("It's not hot.");
+// 	}
+// }
+// hotOrNot(76);
 
-hotOrNot(76);
-
-// "It's so hot!" will be logged to the console because temp is greater than 75
 
 // ---- B ------
 
-// Look at the below function. Predict what will happen when the function is called.
-function priceCheck (title, listPrice, taxRate) {
-    let salesTax = listPrice * taxRate;
-    let total = listPrice + salesTax;
-    console.log(title + ' costs $' + total + '.');
-}
+// Look at the below function. Predict what will happen when you uncomment the code.
+// Uncomment the code - what gets logged to the console?
+// BONUS: Use jQuery to put the value of the function call in the p with id "price"
 
-priceCheck('Catcher in the Rye', 15, .10);
+// function priceCheck (title, listPrice, taxRate) {
+//     let salesTax = listPrice * taxRate;
+//     let total = listPrice + salesTax;
+//     console.log(title + ' costs $' + total + '.');
+// }
+// priceCheck('Catcher in the Rye', 15, .10);
 
-// The following will be logged to the console:
-// Catcher in the Rye costs $16.5.
+
 
 
 
@@ -58,6 +63,7 @@ priceCheck('Catcher in the Rye', 15, .10);
 // See if you can write one function that takes some parameters and combines the
 // functionality of the makeAPizza and makeAVeggiePizza functions.
 // BONUS: Create your own function with parameters. This function could do anything!
+// BONUS 2: Use jQuery to put the value of the function call in the p with id "order"
 
 // function makeAPizza () {
 //   let topping1 = 'pepperoni';
@@ -66,11 +72,7 @@ priceCheck('Catcher in the Rye', 15, .10);
 
 //   console.log('Coming right up! A pizza with ' + topping1 + ', ' + topping2 + ' and ' + topping3 + '.');
 // }
-
-
 // makeAPizza();
-
-
 
 // function makeAVeggiePizza () {
 //   let topping1 = 'peppers';
@@ -79,8 +81,6 @@ priceCheck('Catcher in the Rye', 15, .10);
 
 //   console.log('Coming right up! A pizza with ' + topping1 + ', ' + topping2 + ' and ' + topping3 + '.');  
 // }
-
-
 // makeAVeggiePizza();
 
 function makeAnyPizza(topping1, topping2, topping3) {

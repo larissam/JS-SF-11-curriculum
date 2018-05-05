@@ -39,11 +39,3 @@
 
 // 1. Look at the code as-is. What do you expect the value of answer to be?
 // 2. Now uncomment out the 'return result;' line. What is the value of answer now?
-function sum(num1, num2) {
-    let result = num1 + num2;
-    console.log(result);
-    // return result;
-}
-
-let answer = sum(3, 4);
-console.log('answer: ', answer);

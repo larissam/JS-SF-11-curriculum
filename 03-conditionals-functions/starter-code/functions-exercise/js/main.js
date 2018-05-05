@@ -12,10 +12,6 @@
 // 2. Call the function
 // BONUS: Use jQuery to put the value of new Date() in the p with id "date"
 
-function logDate(){
-  console.log(new Date());
-}
-logDate();
 
 
 
@@ -64,21 +60,3 @@ logDate();
 // functionality of the makeAPizza and makeAVeggiePizza functions.
 // BONUS: Create your own function with parameters. This function could do anything!
 // BONUS 2: Use jQuery to put the value of the function call in the p with id "order"
-
-function makeAPizza () {
-  let topping1 = 'pepperoni';
-  let topping2 = 'cheese';
-  let topping3 = 'mushrooms'
-
-  console.log('Coming right up! A pizza with ' + topping1 + ', ' + topping2 + ' and ' + topping3 + '.');
-}
-makeAPizza();
-
-function makeAVeggiePizza () {
-  let topping1 = 'peppers';
-  let topping2 = 'onions';
-  let topping3 = 'mushrooms'
-
-  console.log('Coming right up! A pizza with ' + topping1 + ', ' + topping2 + ' and ' + topping3 + '.');  
-}
-makeAVeggiePizza();
