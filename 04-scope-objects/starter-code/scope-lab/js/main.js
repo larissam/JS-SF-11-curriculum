@@ -1,13 +1,14 @@
 // ---- A ------
 // Fix the following function so that we aren't getting an error! 
-// Hint: move this line: console.log('Hello ' + name);
+// Hint: move this line: console.log("Hello " + name);
 
 let sayHello = function () {
-    let name = 'Marie';
+    var name = "Marie";
 }
 
+console.log("Hello " + name);
+
 sayHello();
-console.log('Hello ' + name);
 
 
 // ---- B ------
@@ -18,9 +19,9 @@ console.log('Hello ' + name);
 // Fix the following function. Right now the total is resetting every time the function runs.
 
 let scorePoint = function () {
-   let total = 0;
-   total += 1;
-   console.log(total);
+    let total = 0;
+    total += 1;
+    console.log(total);
 }
 
 scorePoint();

@@ -1,4 +1,22 @@
-// Create three monkey objects
+/* Create objects for three different monkeys (called monkey1, monkey2, monkey3),
+each with the following properties:
+* name
+* species
+* foodsEaten
+
+And the following methods:
+* eat(food)
+* introduce: produces a string introducing itself, including its name, species, and what it's eaten.
+
+Create 3 monkeys total. Make sure all 3 monkeys have all properties set and methods defined.
+
+Choose which partner will initially take the pair programming role of driver and who will be the observer. 
+Switch roles after creating the first object, then again after creating the second. 
+Also be sure each partner takes a turn in each role during the exercise steps below.
+
+Exercise your monkeys by retrieving their properties and using their methods. 
+Practice using both syntaxes for retrieving properties (dot notation and brackets).
+*/
 
 let monkey1 = {
   name: "Hermione",
@@ -35,36 +53,3 @@ let monkey3 = {
     console.log("My name is "+ monkey3.name +". I come from the "+ monkey3.species + " family. I have eaten these foods: "+ monkey3.foodsEaten.join(", ") + ".");
   }
 };
-
-
-// Create a constructor function that makes a monkey
-/*
-function Monkey(name, species) {
-  this.name       = name;
-  this.species    = species;
-  this.foodsEaten = [];
-  this.eatSomething = function(food) {
-    this.foodsEaten.push(food);
-  }
-  this.introduce = function() {
-    console.log("My name is "+ this.name +". I come from the "+ this.species + " family. I have eaten "+ this.foodsEaten.join(", ") + ".");
-  }
-}
-
-let monkey1 = new Monkey("Jack", "Howler");
-monkey1.eatSomething("banana");
-monkey1.introduce();
-
-let monkey2 = new Monkey("James", "Pygmy Marmoset");
-monkey2.eatSomething("peach");
-monkey2.eatSomething("plum");
-monkey2.introduce();
-
-let monkey3 = new Monkey("James", "Squirrel Monkey");
-monkey3.eatSomething("pineapple");
-monkey3.introduce();
-
-// Getting properties using the dot syntax / bracket syntax
-console.log(monkey1.name);
-console.log(monkey1["name"]);
-*/

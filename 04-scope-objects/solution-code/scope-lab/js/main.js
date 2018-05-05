@@ -7,6 +7,7 @@ let sayHello = function () {
     console.log("Hello " + name);
 }
 
+
 sayHello();
 
 
@@ -19,8 +20,8 @@ sayHello();
 
 let total = 0;
 let scorePoint = function () {
-   total += 1;
-   console.log(total);
+    total += 1;
+    console.log(total);
 }
 
 scorePoint();
