@@ -15,11 +15,22 @@
 // ____________________________________________________________________________
 
 // join()
-// pop()
 // push(item1, item2, ... , itemN)
+// pop()
 // reverse()
-// shift()
 // unshift(item1, item2, ... , itemN)
+// shift()
+
+// Pretend we're a pet store. 
+// Create an array of pets we are going to sell: cat, dog, hamster, guinea pig
+
+// Add a pet to the end of the list
+
+// Remove a pet from end of the list the list
+
+// Add a pet to the beginning of the list
+
+// Remove a pet from the beginning of the list
 
 
 
@@ -32,3 +43,7 @@
 // filter()
 // every()
 // some()
+
+// Go through the list of pets we created in part 2 and log each to the console
+
+// Log out all the pets except for the dog
