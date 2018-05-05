@@ -9,6 +9,9 @@ console.log('PART 1 - Data types & typeof');
 'nine'
 
 // your code here
+console.log(typeof(9));
+console.log(typeof('9'));
+console.log(typeof('nine'));
 
 
 
@@ -24,7 +27,9 @@ let name = 'Larissa';
 let favoriteIceCreamFlavor = 'coffee';
 
 // your code here
-
+console.log(typeof(age));
+console.log(typeof(name));
+console.log(typeof(favoriteIceCreamFlavor));
 
 
 
@@ -37,6 +42,7 @@ let salesTaxRate = 0.085;
 let totalPrice;
 
 // your code here
-
+totalPrice = basePrice + basePrice*salesTaxRate;
+console.log(totalPrice);
 
 
