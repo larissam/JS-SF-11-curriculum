@@ -15,6 +15,7 @@ $(function() {
   const $buttons = $('#animalsList li');
   const $images = $('.image');
 
+  // PART 1 - Chaining
   // 1. use chaining
   $buttons.on('click', function(){
     const $animal = $(this);
@@ -38,8 +39,9 @@ $(function() {
     $gallery.append($newTile);
   })
 
+
+  // PART 2 - Event Delegation
   // 1. use event delegation so these handlers are attached to programmatically created images
-  // 2. combine handlers
   $images.on('mouseenter', function() {
     $(this).addClass('active');
     $(this).siblings().removeClass('active');
@@ -47,4 +49,7 @@ $(function() {
   $images.on('mouseleave', function() {
     $(this).removeClass('active');
   });
+
+  // PART 3 - Attaching Multiple Handlers
+  // 1. combine the handlers above
 });

@@ -6,15 +6,17 @@ Improving a favorites list
 
 function addToList($list, thing) {
 
-// 1. Comment out the following three lines of code, then below them 
-//    write a single statement to replace them, using chaining.
-// Start of code to replace
+  // 1. Comment out the following three lines of code, then below them 
+  //   write a single statement to replace them, using chaining.
+
+  // Start of code to replace
   const $thingLi = $('<li>');
   $thingLi.html(thing);
   $thingLi.addClass('fav-thing');
-// End of code to replace
+  // End of code to replace
 
-// Add refactored statement here:
+  // Add refactored statement here:
+
 
 
   addCrossOffLink($thingLi);
@@ -22,28 +24,21 @@ function addToList($list, thing) {
 }
 
 function addCrossOffLink($li) {
-// 2. Comment out the following three lines of code, then below them 
-//    write a single statement to replace them, using chaining.
-// Start of code to replace
+  // 2. Comment out the following three lines of code, then below them 
+  //   write a single statement to replace them, using chaining.
+
+  // Start of code to replace
   const $crossOffLink = $('<span>');
   $crossOffLink.html(' cross off');
   $crossOffLink.addClass('cross-off');
-// End of code to replace
+  // End of code to replace
 
-// Add refactored statement here:
-
-
-// 3. Comment out the following three lines of code, then below them
-//    write a single statement to replace them, using implicit iteration.
-// Start of code to replace
-  $li.each(function() {
-    $(this).append($crossOffLink);
-  });
-// End of code to replace
-
-// Add refactored statement here:
+  // Add refactored statement here:
 
 
+
+
+  $li.append($crossOffLink);
 }
 
 
@@ -57,7 +52,6 @@ $(function() {
     addCrossOffLink($(li));
   });
 
-  const $crossOffLink = $('.cross-off');
 
   $button.on('click', function(event) {
     event.preventDefault();
@@ -70,18 +64,19 @@ $(function() {
     }
   });
 
-// 4. Update the event listener code below to use event delegation.
-//    - Change the selector to set the on event on the unordered list, rather
-//      than on the list items themselves.
-//    - Specify the child elements with the class value of cross-off as the
-//      elements to which the event is delegated.
+  // 4. Update the event listener code below to use event delegation.
+  //   - Change the selector to set the on event on the unordered list, rather
+  //     than on the list items themselves.
+  //   - Specify the child elements with the class 'cross-off' as the
+  //     elements to which the event is delegated.
 
-// Start of code to replace
+  // Start of code to replace
+  const $crossOffLink = $('.cross-off');
   $crossOffLink.on('click', function(event) {
     $(this).parent().addClass('crossed-off');
     $(this).html('');
   });
-// End of code to replace
+  // End of code to replace
 
 });
 
