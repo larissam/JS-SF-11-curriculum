@@ -25,16 +25,24 @@ const sessions = [
   }
 ];
 
-let content = '';
+// imagine we want the html for each session to look like this
+// <div class="session">
+  // <p class="title">Advances in Wasp Farming</p>
+  // <p><span class="label">Time: </span>Monday 12:30 - 2:00</p>
+  // <p><span class="label">Presenter: </span>Cassandra Fleming</p>
+  // <p>Recent advances and trends among wasp farmers</p>
+// </div>
 
-sessions.forEach(function(session) {
-  content += `
-    <div class="session">
-      <p class="title">${session.title}</p>
-      <p><span class="label">Time: </span>${session.day} ${session.start} - ${session.end}</p>
-      <p><span class="label">Presenter: </span>${session.presenter}</p>
-      <p>${session.summary}</p>
-    </div>`;
+// loop through the sessions array to create a string that contains one
+// div for each session
+let content = '';
+sessions.forEach(function(session){
+  // your code here
+  // HINT: use +=
+
+
+
+
 });
 
 $('.sessions').html(content);
