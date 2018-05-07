@@ -1,3 +1,22 @@
+let status;
+function doSomething() {
+    for (let i = 0; i < 1000000000; i++) {
+      numberArray.push(i);
+    }
+    status = “done”;
+    console.log(“First function done”);
+}
+function doAnotherThing() {
+    console.log(“Second function done”);
+}
+function doSomethingElse() {
+    console.log(“Third function: ” + status);
+}
+
+doSomething();
+doAnotherThing();
+doSomethingElse();
+
 /* setTimeout(function() {
     console.log("Hello world!");
 }, 2000) */
