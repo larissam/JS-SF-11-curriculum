@@ -3,16 +3,15 @@
   - start: if the fuel level is 0, logs "out of gas" to the console; otherwise, logs "started and ready to go"
   - drive: if the fuel level is 0, logs "out of gas" to the console; otherwise, reduces fuel by 1 and logs "Vroom!"
   - refuel: sets the fuel level to 2, and logs the fuel level to the console
-  - getMake: logs the kind of car (stored in the 'kind' parameter) to the console
+  - getMake: logs the kind of car (stored in the 'make' parameter) to the console
   When your code is complete and works properly, the statements at the bottom of the file should all return
   the expected values in the console.
   BONUS: Add a "tradeIn" method that lets you change the make of the car and refuels it. Be sure the getMake method 
   still works after doing a tradeIn.
 */
 
-const car = (function(kind) {
+const car = (function(make) {
   let fuel = 2;
-  let make = kind; // only necessary for bonus
 
   return {
     drive: function() {
@@ -39,8 +38,7 @@ const car = (function(kind) {
     },
 
     getMake: function() {
-//      return kind;
-      console.log(make); // changed for bonus
+      console.log(make);
     },
 
     tradeIn: function(newMake) { // bonus
