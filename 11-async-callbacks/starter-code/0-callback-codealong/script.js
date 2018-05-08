@@ -1,48 +1,27 @@
-let status;
-function doSomething() {
-    for (let i = 0; i < 1000000000; i++) {
-      numberArray.push(i);
-    }
-    status = “done”;
-    console.log(“First function done”);
-}
-function doAnotherThing() {
-    console.log(“Second function done”);
-}
-function doSomethingElse() {
-    console.log(“Third function: ” + status);
-}
-
-doSomething();
-doAnotherThing();
-doSomethingElse();
-
-/* setTimeout(function() {
-    console.log("Hello world!");
-}, 2000) */
-
-const numbers = [[1,2],[8,6],[5,9]];
-
 // PART 1
-// create a function named 'sumArray', that sums each pair of numbers
-// for example, sumArray(numbers) should return [3, 14, 14]
+// Create a function called getName that takes a object and returns the value of its name property
 
-const sumArray = function(values) { // takes an array of values as a parameter
-};
+// Example:
+// let cat = {
+//   name: 'Mint',
+//   age: 1
+// };
+// getName(cat) should return 'Mint'
 
-// create a function named 'diffArray', that subtracts the second number from the first in each pair
-// for example, diffArray(numbers) should return [-1, 2, -4]
-
-const diffArray = function(values) { // takes an array of values as a parameter
-};
-
-// function that accepts a callback function as a parameter
-const showResults = function(values, callback) { // callback can be sumArray or diffArray
-  // create a new variable and store the result of calling the callback function, 
-  // providing the values parameter as an argument
-  const changedArray = callback(values);
-  console.log("The result of " + callback.name + " is " + changedArray);
-}
-
-showResults(numbers, sumArray); 
-showResults(numbers, diffArray); 
+// PART 2
+// Create a function called 'map' which takes an array and a function
+// And returns a new array that contains the result of calling the function
+// on each of the elements in the array.
+// 
+// Example:
+// let cats = [{
+//   name: 'Mint',
+//   age: 1
+// }, {
+//   name: 'Smoky',
+//   age: 2
+// }, {
+//   name: 'Napoleon',
+//   age: 3
+// }];
+// map(cats, getName) should return a new array ['Mint', 'Smoky', 'Napoleon']
