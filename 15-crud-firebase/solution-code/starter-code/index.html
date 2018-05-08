@@ -9,7 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <!-- font awesome -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet"></link>
 </head>
@@ -40,7 +40,7 @@
           <h2>Produce Postings <i class="fa fa-leaf" aria-hidden="true"></i></h2>
         </div>
         <div class="panel-body">
-          <ul class="message-board">
+          <ul id="message-board">
           </ul>
         </div>
       </div>
@@ -49,10 +49,19 @@
 
 
   <!-- PART 1: Put Firebase imports here -->
-
-
-
-
+  <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD4gHC4mNWshMWpPGLNtrkgJzzW6iR1LTY",
+      authDomain: "jsd11-sample-app.firebaseapp.com",
+      databaseURL: "https://jsd11-sample-app.firebaseio.com",
+      projectId: "jsd11-sample-app",
+      storageBucket: "jsd11-sample-app.appspot.com",
+      messagingSenderId: "905385203315"
+    };
+    firebase.initializeApp(config);
+  </script>
 
   <!-- Bootstrap JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
