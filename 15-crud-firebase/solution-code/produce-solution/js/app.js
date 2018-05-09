@@ -3,18 +3,18 @@
 // when the document is ready, read from db and 
 // attach update/delete handlers to each post
 $(document).ready(function() {
-    let messages;
-
     console.log('ready!')
-    const $board = $('#message-board');
-    // do not use 'once', use 'on' because it'll update for you automatically
+
+    let messages;
     firebase.database().ref('messages').on('value', function(snapshot) {
         messages = snapshot.val() || {};
+
+        const $board = $('#message-board');
         $board.empty();
 
         Object.keys(messages).forEach(function(id) {
             const message = messages[id];
-            // note - they use font awesome icons for the stuff
+
             const template = `
                 <li data-id="${id}">
                     ${message.text}
@@ -23,17 +23,17 @@ $(document).ready(function() {
                     <i class="fas fa-thumbs-down dislike"></i>
                     <i class="fas fa-trash delete"></i>
                 </li>
-            `
+            `;
             const $message = $(template);
             $board.append($message);
         });
     });
 
-    // create
     $('#message-form').on('submit', function(e){
         e.preventDefault();
+
         const $message = $('#message');
-        const id = firebase.database().ref('messages').push({
+        firebase.database().ref('messages').push({
             text: $message.val(),
             votes: 0
         });
@@ -44,19 +44,18 @@ $(document).ready(function() {
     $('#message-board').on('click', 'li', function(e) {
         const id = $(this).data('id');
         const message = messages[id];
-        const path = `messages/${id}`;
 
         const $target = $(e.target);
         if($target.is('.like')) {
-            firebase.database().ref(path).update({
+            firebase.database().ref(`messages/${id}`).update({
                 votes: message.votes + 1
             });
         } else if($target.is('.dislike')) {
-            firebase.database().ref(path).update({
+            firebase.database().ref(`messages/${id}`).update({
                 votes: message.votes - 1
             });
         } else if($target.is('.delete')) {
-            firebase.database().ref(path).remove();
+            firebase.database().ref(`messages/${id}`).remove();
         }
     });
 });

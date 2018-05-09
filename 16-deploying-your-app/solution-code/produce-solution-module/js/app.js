@@ -1,34 +1,27 @@
-// MAKE THIS INTO A MODULE
-
-// i like the idea of putting all the CRUD stuff into a module, and then having document.ready take care of the UI updates
-
 const MessageService = (function(){
+    const db = firebase.database();
     let messages;
 
     function _create(messageText) {
-        return firebase.database().ref('messages').push({
+        db.ref('messages').push({
             text: messageText,
             votes: 0
         });
     }
 
     function _read(callback) {
-        firebase.database().ref('messages').on('value', function(snapshot) {
+        db.ref('messages').on('value', function(snapshot) {
             messages = snapshot.val() || {};
             callback(messages);
         });
     }
 
     function _update(id, updates) {
-        const message = messages[id];
-        const path = `messages/${id}`;
-        firebase.database().ref(path).update(updates);
+        db.ref(`messages/${id}`).update(updates);
     }
 
     function _del(id) {
-        const message = messages[id];
-        const path = `messages/${id}`;
-        firebase.database().ref(path).remove();
+        db.ref(`messages/${id}`).remove();
     }
 
     return {
@@ -48,19 +41,15 @@ const MessageService = (function(){
 })();
 
 
-// when the document is ready, read from db and 
-// attach update/delete handlers to each post
 $(document).ready(function() {
 
-    console.log('ready!')
-    const $board = $('#message-board');
-    // do not use 'once', use 'on' because it'll update for you automatically
+    // Read from the DB
     MessageService.read(function(messages) {
+        const $board = $('#message-board');
         $board.empty();
 
         Object.keys(messages).forEach(function(id) {
             const message = messages[id];
-            // note - they use font awesome icons for the stuff
             const template = `
                 <li data-id="${id}">
                     ${message.text}
@@ -75,15 +64,17 @@ $(document).ready(function() {
         });
     });
 
-    // create
+    // Attach handler for create
     $('#message-form').on('submit', function(e){
         e.preventDefault();
+
         const $message = $('#message');
-        const id = MessageService.create($message.val());
+        MessageService.create($message.val());
 
         $message.val('');
     });
 
+    // Attach handler for update and delete
     $('#message-board').on('click', 'li', function(e) {
         const id = $(this).data('id');
 
@@ -97,8 +88,3 @@ $(document).ready(function() {
         }
     });
 });
-
-// create
-// read
-// update
-// delete
