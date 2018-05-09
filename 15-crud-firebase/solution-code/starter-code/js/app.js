@@ -25,11 +25,6 @@ $(document).ready(function() {
                 </li>
             `
             const $message = $(template);
-            $message.on('click', function(e){
-                console.log('e: ', e)
-                console.log('this: ', $(this))
-
-            })
             $board.append($message);
         });
     });
@@ -46,31 +41,24 @@ $(document).ready(function() {
         $message.val('');
     });
 
-    // $('#message-board').on('click', '.like', function() {
-    //     const id = $(this).parent().data('id');
-    //     const message = messages[id];
-    //     const path = `messages/${id}`;
+    $('#message-board').on('click', 'li', function(e) {
+        const id = $(this).data('id');
+        const message = messages[id];
+        const path = `messages/${id}`;
 
-    //     firebase.database().ref(path).update({
-    //         votes: message.votes + 1
-    //     });
-    // })
-
-    // $('#message-board').on('click', '.dislike', function() {
-    //     const id = $(this).parent().data('id');
-    //     const message = messages[id];
-    //     const path = `messages/${id}`;
-
-    //     firebase.database().ref(path).update({
-    //         votes: message.votes - 1
-    //     });
-    // })
-
-    // delete - way to do without the parent?
-    // $('#message-board').on('click', '.delete', function() {
-    //     const path = `messages/${$(this).parent().data('id')}`;
-    //     firebase.database().ref(path).remove();
-    // });
+        const $target = $(e.target);
+        if($target.is('.like')) {
+            firebase.database().ref(path).update({
+                votes: message.votes + 1
+            });
+        } else if($target.is('.dislike')) {
+            firebase.database().ref(path).update({
+                votes: message.votes - 1
+            });
+        } else if($target.is('.delete')) {
+            firebase.database().ref(path).remove();
+        }
+    });
 });
 
 // create

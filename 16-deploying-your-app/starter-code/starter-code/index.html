@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Public Produce</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet"></link>
+</head>
+
+<body>
+  <div class="container">
+    <div class="panel-group">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h1>Public Produce <i class="fa fa-leaf" aria-hidden="true"></i></h1>
+        </div>
+        <div class="panel-body">
+          <p>Got produce for anyone to pick and take? Let us know!</p>
+          <form action="" id="message-form">
+            <div class="form-group">
+              <label>What and where:</label>
+              <textarea id="message" type="text" class="form-control" placeholder="Example: Mulberries, 254 Cesar Chavez St."></textarea>
+            </div>
+            <button class="btn">Post to board</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-group">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2>Produce Postings <i class="fa fa-leaf" aria-hidden="true"></i></h2>
+        </div>
+        <div class="panel-body">
+          <ul id="message-board">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PART 1: Put Firebase imports here -->
+  <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD4gHC4mNWshMWpPGLNtrkgJzzW6iR1LTY",
+      authDomain: "jsd11-sample-app.firebaseapp.com",
+      databaseURL: "https://jsd11-sample-app.firebaseio.com",
+      projectId: "jsd11-sample-app",
+      storageBucket: "jsd11-sample-app.appspot.com",
+      messagingSenderId: "905385203315"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <!-- Bootstrap JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+  <!-- js -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
