@@ -36,24 +36,11 @@ $(document).ready(function() {
     $(this).html('');
   });
 
-// Refactor the following two event listeners into a single event listener for multiple events.
-/*
+  // Combine these
   $thingList.on('mouseenter', 'li', function(event) {
     $(this).removeClass('inactive');
     $(this).siblings().addClass('inactive');
-  });
-
-  $thingList.on('mouseleave', 'li', function(event) {
+  }).on('mouseleave', 'li', function(event) {
     $(this).siblings().removeClass('inactive');
-  });
-*/
-
-  $thingList.on('mouseenter mouseleave', 'li', function(event) {
-    if (event.type === 'mouseenter') {
-      $(this).removeClass('inactive');
-      $(this).siblings().addClass('inactive');
-    } else if (event.type === 'mouseleave') {
-      $(this).siblings().removeClass('inactive');
-    }
   });
 });
