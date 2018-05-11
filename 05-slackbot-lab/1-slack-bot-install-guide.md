@@ -16,8 +16,8 @@ Your instructor should provide you with a Hubot and an API token; be sure to hav
      Navigate to the parent directory in which you want to create the folder that will contain your app code. This should be the parent directory whose subfolders contain your existing clones of the repos for this course -- for instance, in the folder structure shown below, you would navigate to the `JSD` folder:
 
         JSD
-            L JS-SF-9-homework (existing: clone of GitHub homework repo fork svodnik / JS-SF-9-homework)
-            L JS-SF-9-resources (existing: clone of GitHub resources repo svodnik / JS-SF-9-resources)
+            L JS-SF-11-homework (existing: clone of GitHub homework repo fork larissam / JS-SF-11-homework)
+            L JS-SF-11-resources (existing: clone of GitHub resources repo larissam / JS-SF-11-resources)
             L username.github.io (existing: clone of your personal github.io repo)
             L myhubot (new repo you are about to create for your Slack bot code) 
 
@@ -31,7 +31,9 @@ Your instructor should provide you with a Hubot and an API token; be sure to hav
 
 5. **Install Hubot and its dependencies (CoffeeScript, Yeoman, and the Hubot generator):**
 
-    `$ npm install -g hubot coffee-script yo generator-hubot`
+    `$ sudo npm install -g hubot coffee-script yo generator-hubot`
+    
+    It will ask you to enter your password. Type your password (**NOTE: NOTHING WILL SHOW WHEN YOU TYPE.** Bad UX, I know; but it is working.)
 
 6. **Using Yeoman, generate a Hubot bot:**
 
