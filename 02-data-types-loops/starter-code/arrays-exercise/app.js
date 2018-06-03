@@ -75,7 +75,7 @@ console.log('Question 0 - answer0: ', answer0);
 
 
 // ____________________________________________________________________________
-// SECTION 2: Iterating through array elements
+// BONUS - SECTION 2: Iterating through array elements
 // ____________________________________________________________________________
 
 /**

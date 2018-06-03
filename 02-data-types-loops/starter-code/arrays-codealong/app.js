@@ -42,18 +42,3 @@ console.log('SECTION 2 - Array methods');
 
 // Remove the last pet from the list (the lizard)
 // Log out the array to confirm it was removed
-
-
-// ____________________________________________________________________________
-// SECTION 3: Array iterator methods
-// ____________________________________________________________________________
-
-// forEach()
-// map()
-// filter()
-// every()
-// some()
-
-console.log('SECTION 3 - Array iterator methods');
-
-// Go through the list of pets we created in part 2 and log each to the console
