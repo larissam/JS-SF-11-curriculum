@@ -10,20 +10,7 @@
   conditional statements at https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else). 
 */
 
-// 99 to 3 bottles
-for(let i = 99; i >= 3; i--) {
-  console.log(i + ' bottles of beer on the wall, ' + i + ' bottles of beer.');
-  console.log('Take one down, pass it around, ' + (i-1) + ' bottles of beer on the wall.');
-}
 
-// 2 bottles
-console.log(`2 bottles of beer on the wall, 2 bottles of beer.`);
-console.log(`Take one down, pass it around, one bottle of beer on the wall.`);
 
-// 1 bottle
-console.log(`1 bottle of beer on the wall, 1 bottle of beer.`);
-console.log(`Take one down, pass it around, no more bottles of beer on the wall.`);
 
-// 0 bottles
-console.log(`No more bottles of beer on the wall, no more bottles of beer.`);
-console.log(`Go to the store and buy some more, 99 bottles of beer on the wall.`);
+

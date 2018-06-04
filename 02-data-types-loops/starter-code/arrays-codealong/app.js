@@ -17,7 +17,6 @@ console.log('SECTION 1 - Arrays');
 // SECTION 2: Array methods
 // ____________________________________________________________________________
 
-// join()
 // push(item1, item2, ... , itemN)
 // pop()
 // reverse()

@@ -21,7 +21,6 @@ console.log(foods[foods.length - 1]);
 // SECTION 2: Array methods
 // ____________________________________________________________________________
 
-// join()
 // push(item1, item2, ... , itemN)
 // pop()
 // reverse()
@@ -52,21 +51,3 @@ console.log('pets after removing first pet: ', pets);
 // Log out the array to confirm it was removed
 pets.pop();
 console.log('pets after removing last pet: ', pets);
-
-
-// ____________________________________________________________________________
-// SECTION 3: Array iterator methods
-// ____________________________________________________________________________
-
-// forEach()
-// map()
-// filter()
-// every()
-// some()
-
-console.log('SECTION 3 - Array iterator methods');
-
-// Go through the list of pets we created in part 2 and log each to the console
-pets.forEach(function(pet) {
-    console.log(pet);
-});
