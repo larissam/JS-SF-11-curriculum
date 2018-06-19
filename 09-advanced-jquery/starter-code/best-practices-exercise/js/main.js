@@ -4,10 +4,14 @@ Improving a favorites list
 
 */
 
+//
+// PART 1
+//
+
 function addToList($list, thing) {
 
-  // 1. Comment out the following three lines of code, then below them 
-  //   write a single statement to replace them, using chaining.
+  // Comment out the following three lines of code, then below them 
+  // write a single statement to replace them, using chaining.
 
   // Start of code to replace
   const $thingLi = $('<li>');
@@ -24,8 +28,8 @@ function addToList($list, thing) {
 }
 
 function addCrossOffLink($li) {
-  // 2. Comment out the following three lines of code, then below them 
-  //   write a single statement to replace them, using chaining.
+  //  Comment out the following three lines of code, then below them 
+  //  write a single statement to replace them, using chaining.
 
   // Start of code to replace
   const $crossOffLink = $('<span>');
@@ -41,6 +45,13 @@ function addCrossOffLink($li) {
   $li.append($crossOffLink);
 }
 
+
+
+
+
+//
+// PART 2 - Event Delegation
+//
 
 $(function() {
   const $thingList = $('#fav-list');
@@ -64,7 +75,7 @@ $(function() {
     }
   });
 
-  // 4. Update the event listener code below to use event delegation.
+  // Update the event listener code below to use event delegation.
   //   - Change the selector to set the on event on the unordered list, rather
   //     than on the list items themselves.
   //   - Specify the child elements with the class 'cross-off' as the

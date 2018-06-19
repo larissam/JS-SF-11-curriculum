@@ -17,8 +17,8 @@ let firstItem;
 
 /* Step 1b
 
-Write a statement that logs the class value of the element referenced by firstItem to the console.
-(HINT: Use the classList property's value property.)
+Write a statement that logs firstItem's className property to the console.
+(HINT: Use the className property)
 
 */
 
@@ -27,7 +27,7 @@ Write a statement that logs the class value of the element referenced by firstIt
 
 /* Step 1c
 
-Write a statement that adds the 'highlight' class to the element referenced by firstItem to highlight.
+Write a statement that adds the 'highlight' class to firstItem.
 (HINT: Use the classList property's add method.)
 
 */
@@ -68,7 +68,7 @@ Write a statement that logs the class value of the element referenced by firstIt
 
 /* Step 2b
 
-Write a statement that sets the class value of the element referenced by firstItem to hidden.
+Write a statement that adds the 'hidden' class to firstItem.
 (HINT: Use the classList property's add method.)
 
 */
@@ -84,7 +84,7 @@ Verify that the first list item ("Buena Vista Park") is no longer displayed.
 
 /* Step 2d
 
-Write a statement that removes the 'hidden' class.
+Write a statement that removes the 'hidden' class from firstItem.
 (HINT: Use the classList property's remove method.)
 
 */

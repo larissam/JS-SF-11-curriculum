@@ -24,11 +24,10 @@ div class="sidebar"   // parent element: already in the HTML file
 
 
 // * STEP 2
-// Write a statement to create the text node for the h3 element, using the text "About Us"
+// Set the h3 element's text content to be "About Us"
 
 
-// Write statements to create the text nodes for the two p 
-// elements, using the following text values:
+// Set the two p elements' text content to be the following:
 
 //     Text for the first paragraph:
 //     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum fugiat illo sunt quasi incidunt veniam cumque minus totam rem ea vel ut eius, accusamus, doloribus dolore at ipsum quaerat molestias.
@@ -40,24 +39,20 @@ div class="sidebar"   // parent element: already in the HTML file
 
 
 
+
+
 // * STEP 3
-// Make the heading text node a child of the heading element
-// Make the paragraph text nodes children of their respective paragraph elements
-
-
-
-// * STEP 4
 // Write a statement to create a variable called sidebar and set its value to reference the div with class 'sidebar'.
 
 
-// * STEP 5
+// * STEP 4
 // Make the h3 a child of the sidebar
 // Make the 2 paragraphs children of the sidebar
 
 
 
 
-// * STEP 6
+// * STEP 5
 // Save your changes, open index.html in your browser, then compare the web page to the mocks.pdf image.
 
 

@@ -9,7 +9,7 @@ function addCrossOffLink($li) {
   $li.append($crossOffLink);
 }
 
-$(document).ready(function() {
+$(function() {
   const $thingList = $('#fav-list');
   const $things = $('.fav-thing');
   const $button = $('#new-thing-button');
@@ -36,7 +36,13 @@ $(document).ready(function() {
     $(this).html('');
   });
 
-  // Combine these
+
+
+
+
+  //
+  // Combine these two event handlers
+  //
   $thingList.on('mouseenter', 'li', function(event) {
     $(this).removeClass('inactive');
     $(this).siblings().addClass('inactive');

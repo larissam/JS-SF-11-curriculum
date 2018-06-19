@@ -8,18 +8,18 @@
 // Fix the function so the console.log() statement correctly logs the value.
 // Hint: Think about the scope of each variable declaration.
 
-let cost = 17.52;
+// let cost = 17.52;
 
-function setPayment() {
-    if (cost < 10) {
-        let payMethod = 'cash';
-    } else {
-        let payMethod = 'credit';
-    }
-    console.log("I'll pay with " + payMethod); 
-}
+// function setPayment() {
+//     if (cost < 10) {
+//         let payMethod = 'cash';
+//     } else {
+//         let payMethod = 'credit';
+//     }
+//     console.log("I'll pay with " + payMethod); 
+// }
 
-setPayment();
+// setPayment();
 
 
 // PART B
@@ -32,13 +32,13 @@ setPayment();
 // Fix the function so the console.log() statement correctly logs the value.
 // Hint: What is the difference between using let and const for each variable?
 
-function calcTotal(price, shipping) {
-    const taxRate = 0.085;
-    const totalTax;
-    const totalCost;
-    totalTax = taxRate * price;
-    totalCost = (price + totalTax + shipping).toFixed(2);
-    console.log('The total cost is $' + totalCost);
-}
+// function calcTotal(price, shipping) {
+//     const taxRate = 0.085;
+//     const totalTax;
+//     const totalCost;
+//     totalTax = taxRate * price;
+//     totalCost = (price + totalTax + shipping).toFixed(2);
+//     console.log('The total cost is $' + totalCost);
+// }
 
-calcTotal(85.94, 12.95);
+// calcTotal(85.94, 12.95);

@@ -41,7 +41,8 @@ $(function() {
 
 
   // PART 2 - Event Delegation
-  // 1. use event delegation so these handlers are attached to programmatically created images
+  // 1. Notice that newly added images do not have the hover effect.
+  //    Use event delegation so these handlers are attached to programmatically created images
   $images.on('mouseenter', function() {
     $(this).addClass('active');
     $(this).siblings().removeClass('active');
@@ -50,6 +51,9 @@ $(function() {
     $(this).removeClass('active');
   });
 
+
+
+  
   // PART 3 - Attaching Multiple Handlers
   // 1. combine the handlers above
 });

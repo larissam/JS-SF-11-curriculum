@@ -7,7 +7,7 @@ const session = {
   summary: "Recent advances and trends among wasp farmers"
 };
 
-// imagine we want the html for each session to look like this
+// imagine we want the html for the session to look like this
 // <div class="session">
   // <p class="title">Advances in Wasp Farming</p>
   // <p><span class="label">Time: </span>Monday 12:30 - 2:00</p>

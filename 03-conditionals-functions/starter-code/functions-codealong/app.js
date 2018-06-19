@@ -38,9 +38,11 @@
 //
 
 // 1. Look at the code as-is. What do you expect the value of answer to be?
-// 2. Now uncomment out the 'return words;' line. What is the value of answer now?
+// 2. Now uncomment out the FIRST 'return result;' line (44). What is the value of answer now?
+// 3. Now uncomment out the SECOND 'return result;' line (48). What is the value of answer now?
 
 function sum(num1, num2) {
+    // return result;
     let result = num1 + num2;
     console.log(result);
     // return result;

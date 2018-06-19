@@ -2,11 +2,12 @@
 // Add the 'list-group-item' class to it
 
 
-// STEP 2 - Create text content for it
-// The text content should equal 'Walk the dog'
+// STEP 2 - Set the new element's textContent to be 'Walk the dog'
 
 
-// STEP 3 - Add the text content as the li's child
+
+// STEP 3 - Find the element you want to attach the new li element to
 
 
-// STEP 4 - Add the content to the dom
+
+// STEP 4 - Attach the new li element to the element you found in STEP 3

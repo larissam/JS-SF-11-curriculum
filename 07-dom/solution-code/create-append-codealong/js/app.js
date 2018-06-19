@@ -3,12 +3,16 @@
 let li = document.createElement('li');
 li.classList.add('list-group-item');
 
-// STEP 2 - Create text content for it
-// The text content should equal 'Walk the dog'
-let liText = document.createTextNode('Walk the dog');
 
-// STEP 3 - Add the text content as the li's child
-li.appendChild(liText);
+// STEP 2 - Set the new element's textContent to be 'Walk the dog'
+li.textContent = 'Walk the dog';
 
-// STEP 4 - Add the content to the dom
-document.querySelector('#surveyList').appendChild(li);
+
+
+// STEP 3 - Find the element you want to attach the new li element to
+let parent = document.querySelector('#surveyList');
+
+
+
+// STEP 4 - Attach the new li element to the element you found in STEP 3
+parent.appendChild(li);
