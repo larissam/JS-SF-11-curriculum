@@ -9,46 +9,44 @@ function addCrossOffLink($li) {
   $li.append($crossOffLink);
 }
 
-$(function() {
-  const $thingList = $('#fav-list');
-  const $things = $('.fav-thing');
-  const $button = $('#new-thing-button');
-  const $newThingInput = $('#new-thing');
+const $thingList = $('#fav-list');
+const $things = $('.fav-thing');
+const $button = $('#new-thing-button');
+const $newThingInput = $('#new-thing');
 
-  $things.toArray().forEach(function(li) {
-    addCrossOffLink($(li));
-  });
+$things.toArray().forEach(function(li) {
+  addCrossOffLink($(li));
+});
 
-  $button.on('click', function(event) {
-    event.preventDefault();
-    const newThing = $newThingInput.val();
-    if (newThing === '') {
-      alert('You must type in a value!');
-    } else {
-      addToList($thingList, newThing);
-      $newThingInput.val('');
-    }
-  });
+$button.on('click', function(event) {
+  event.preventDefault();
+  const newThing = $newThingInput.val();
+  if (newThing === '') {
+    alert('You must type in a value!');
+  } else {
+    addToList($thingList, newThing);
+    $newThingInput.val('');
+  }
+});
 
-  $thingList.on('click', '.fav-thing .cross-off', function() {
-    const $thingItem = $(this).parent();
-    $thingItem.addClass('crossed-off');
-    $(this).html('');
-  });
-
+$thingList.on('click', '.fav-thing .cross-off', function() {
+  const $thingItem = $(this).parent();
+  $thingItem.addClass('crossed-off');
+  $(this).html('');
+});
 
 
 
 
-  //
-  // Combine these two event handlers
-  //
-  $thingList.on('mouseenter', 'li', function(event) {
-    $(this).removeClass('inactive');
-    $(this).siblings().addClass('inactive');
-  });
 
-  $thingList.on('mouseleave', 'li', function(event) {
-    $(this).siblings().removeClass('inactive');
-  });
+//
+// Combine these two event handlers
+//
+$thingList.on('mouseenter', 'li', function(event) {
+  $(this).removeClass('inactive');
+  $(this).siblings().addClass('inactive');
+});
+
+$thingList.on('mouseleave', 'li', function(event) {
+  $(this).siblings().removeClass('inactive');
 });

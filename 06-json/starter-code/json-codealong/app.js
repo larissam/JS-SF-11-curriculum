@@ -3,8 +3,12 @@ let weatherData = '{"coord":{"lon":-122.42,"lat":37.77},"weather":[{"id":801,"ma
 
 // PART 1 - Parse the JSON data and log it to the console
 // your code here
-
-
+// console.log(weatherData);
+// console.log(JSON.parse(weatherData));
+let parsedWeatherData = JSON.parse(weatherData);
+console.log(parsedWeatherData);
+console.log('base: ', parsedWeatherData.base);
+console.log('latitude: ', parsedWeatherData.coord.lat);
 
 
 
@@ -14,6 +18,11 @@ let pressure;
 let conditions;
 
 // your code here
+pressure = parsedWeatherData.main.pressure;
+console.log('pressure: ', pressure);
+conditions = parsedWeatherData.weather[0].description;
+
+console.log('conditions: ', conditions);
 
 
 

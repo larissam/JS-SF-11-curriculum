@@ -30,32 +30,3 @@
 // prebuilt styles using class names. Make sure the new questions you add to the 
 // survey use the same class names as in the sample form questions to take 
 // advantage of Bootstrap styles.
-
-function getQuestionTemplate(question) {
-    return `
-        <li class="form-group padout">
-            <label>${question}</label>
-            <input type="text" class="form-control">
-            <button>Remove question</button>
-        </li>
-    `;
-}
-
-$('#addQuestion').on('click', function(e){
-    e.preventDefault();
-    // add a question
-    const $questionInput = $('#question');
-    $('#surveyList').append(getQuestionTemplate($questionInput.val()));
-
-    // clear the input
-    $questionInput.val('');
-});
-
-// event delegation
-$('#surveyList').on('click', 'button', function(){
-    $(this).parent().remove(); // remove the li element. Chaining
-}).on('mouseenter', 'li', function(){
-    $(this).addClass('bg-warning');
-}).on('mouseleave', 'li', function(){
-    $(this).removeClass('bg-warning');
-});

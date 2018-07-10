@@ -24,23 +24,18 @@
 //    data for the location they specify 
 //    (Uncomment out the existing form code in index.html as marked).
 
-'use strict';
-
 function kelvinToFahrenheit(temp) {
    return (temp - 273.15) * 1.8 + 32;
 }
 
 // open weather
 const weatherUrl = 'http://api.openweathermap.org/data/2.5/weather';
-const apiKey = '2e1d4c7c2deb644196be34cc6c51bf78';
+const apiKey = ''; // replace with your own
 
-$.ajax({
-    url: weatherUrl,
-    data: {
-        q: 'San Francisco',
-        appId: apiKey
-    }
-}).done(function(response){
+$.get(weatherUrl, {
+    q: 'San Francisco',
+    appId: apiKey
+}, function(response){
     const temp = response.main.temp;
     const tempF = kelvinToFahrenheit(temp);
 
@@ -48,15 +43,12 @@ $.ajax({
 });
 
 // weather unlocked
-const weatherUnlockedUrl = ' http://api.weatherunlocked.com/api/current/us.94107';
+const weatherUnlockedUrl = 'http://api.weatherunlocked.com/api/current/us.94107';
 
-$.ajax({
-    url: weatherUnlockedUrl,
-    data: {
-        app_id: '16c3d008',
-        app_key: '753ed6862be1d08a5fe1d6953b9dbfc0'
-    }
-}).done(function(response){
+$.get(weatherUnlockedUrl, {
+    app_id: '', // replace with your own
+    app_key: '' // replace with your own
+}, function(response){
     const tempF = response.temp_f;
 
     $('#weatherUnlockedTemp').text(tempF);

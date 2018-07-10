@@ -1,9 +1,10 @@
 /* 
-
 Improving a favorites list
-
 */
 
+//
+// HELPER FUNCTIONS
+//
 function addToList($list, thing) {
 
   // 1. Comment out the following three lines of code, then below them 
@@ -42,42 +43,43 @@ function addCrossOffLink($li) {
 }
 
 
-$(function() {
-  const $thingList = $('#fav-list');
-  const $things = $('.fav-thing');
-  const $button = $('#new-thing-button');
-  const $newThingInput = $('#new-thing');
+//
+// MAIN PROGRAM
+//
+const $thingList = $('#fav-list');
+const $things = $('.fav-thing');
+const $button = $('#new-thing-button');
+const $newThingInput = $('#new-thing');
 
-  $things.toArray().forEach(function(li) {
-    addCrossOffLink($(li));
-  });
-
-
-  $button.on('click', function(event) {
-    event.preventDefault();
-    const newThing = $newThingInput.val();
-    if (newThing === '') {
-      alert('You must type in a value!');
-    } else {
-      addToList($thingList, newThing);
-      $newThingInput.val('');
-    }
-  });
-
-  // 4. Update the event listener code below to use event delegation.
-  //   - Change the selector to set the on event on the unordered list, rather
-  //     than on the list items themselves.
-  //   - Specify the child elements with the class 'cross-off' as the
-  //     elements to which the event is delegated.
-
-  // Start of code to replace
-  $thingList.on('click', '.cross-off', function(event) {
-    $(this).parent().addClass('crossed-off');
-    $(this).html('');
-  });
-  // End of code to replace
-
+$things.toArray().forEach(function(li) {
+  addCrossOffLink($(li));
 });
+
+
+$button.on('click', function(event) {
+  event.preventDefault();
+  const newThing = $newThingInput.val();
+  if (newThing === '') {
+    alert('You must type in a value!');
+  } else {
+    addToList($thingList, newThing);
+    $newThingInput.val('');
+  }
+});
+
+// 4. Update the event listener code below to use event delegation.
+//   - Change the selector to set the on event on the unordered list, rather
+//     than on the list items themselves.
+//   - Specify the child elements with the class 'cross-off' as the
+//     elements to which the event is delegated.
+
+// Start of code to replace
+$thingList.on('click', '.cross-off', function(event) {
+  $(this).parent().addClass('crossed-off');
+  $(this).html('');
+});
+// End of code to replace
+
 
 // BONUS 1: When the user mouses over each item, the item should turn grey. 
 //          Don't use the CSS :hover pseudo-class for this.

@@ -12,31 +12,29 @@ when it is added to the list.
 
 */
 
-window.addEventListener('load', function() {
-  const button = document.querySelector('#new-thing-button');
-  const thingList = document.querySelector('#fav-list');
-  const newThingInput = document.querySelector('#new-thing');
+const button = document.querySelector('#new-thing-button');
+const thingList = document.querySelector('#fav-list');
+const newThingInput = document.querySelector('#new-thing');
+// BONUS 1:
+// const errorMsg = document.querySelector('#error-message');
+
+button.addEventListener('click', function(event) {
+  event.preventDefault();
+  const newThing = newThingInput.value;
+
   // BONUS 1:
-  // const errorMsg = document.querySelector('#error-message');
+  // if (newThing === '') {
+  //   errorMsg.className = 'error-text';
+  //   newThingInput.className = 'error';
+  //   return false;
+  // }
 
-  button.addEventListener('click', function(event) {
-    event.preventDefault();
-    const newThing = newThingInput.value;
-
-    // BONUS 1:
-    // if (newThing === '') {
-    //   errorMsg.className = 'error-text';
-    //   newThingInput.className = 'error';
-    //   return false;
-    // }
-
-    const newThingLi = document.createElement('li');
-    const newThingText = document.createTextNode(newThing);
-    newThingLi.appendChild(newThingText);
-    thingList.appendChild(newThingLi);
-    newThingInput.value = '';
-    // BONUS 1:
-    // newThingInput.className = '';
-    // errorMsg.className = 'hidden';
-  }, false);
+  const newThingLi = document.createElement('li');
+  const newThingText = document.createTextNode(newThing);
+  newThingLi.appendChild(newThingText);
+  thingList.appendChild(newThingLi);
+  newThingInput.value = '';
+  // BONUS 1:
+  // newThingInput.className = '';
+  // errorMsg.className = 'hidden';
 }, false);

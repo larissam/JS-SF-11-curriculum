@@ -10,50 +10,48 @@ const images = {
   bear: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Kamchatka_Brown_Bear_near_Dvuhyurtochnoe_on_2015-07-23.png/1200px-Kamchatka_Brown_Bear_near_Dvuhyurtochnoe_on_2015-07-23.png'
 };
 
-$(function() {
-  const $gallery = $('.gallery');
-  const $buttons = $('#animalsList li');
-  const $images = $('.image');
+const $gallery = $('.gallery');
+const $buttons = $('#animalsList li');
+const $images = $('.image');
 
-  // PART 1 - Chaining
-  // 1. use chaining
-  $buttons.on('click', function(){
-    const $animal = $(this);
-    const id = $animal.attr('id');
+// PART 1 - Chaining
+// 1. use chaining
+$buttons.on('click', function(){
+  const $animal = $(this);
+  const id = $animal.attr('id');
 
-    $animal.addClass('showing');
+  $animal.addClass('showing');
 
-    const $newTile = $('<div>');
-    $newTile.addClass('image');
+  const $newTile = $('<div>');
+  $newTile.addClass('image');
 
-    const $newImage = $('<img>');
-    $newImage.attr('src', images[id]);
-    $newImage.addClass('animal');
+  const $newImage = $('<img>');
+  $newImage.attr('src', images[id]);
+  $newImage.addClass('animal');
 
-    const $caption = $('<p>');
-    const $captionText = $caption.text(id);
-    $caption.append($captionText);
+  const $caption = $('<p>');
+  const $captionText = $caption.text(id);
+  $caption.append($captionText);
 
-    $newTile.append($caption);
-    $newTile.append($newImage);
-    $gallery.append($newTile);
-  })
-
-
-  // PART 2 - Event Delegation
-  // 1. Notice that newly added images do not have the hover effect.
-  //    Use event delegation so these handlers are attached to programmatically created images
-  $images.on('mouseenter', function() {
-    $(this).addClass('active');
-    $(this).siblings().removeClass('active');
-  });
-  $images.on('mouseleave', function() {
-    $(this).removeClass('active');
-  });
+  $newTile.append($caption);
+  $newTile.append($newImage);
+  $gallery.append($newTile);
+})
 
 
-
-  
-  // PART 3 - Attaching Multiple Handlers
-  // 1. combine the handlers above
+// PART 2 - Event Delegation
+// 1. Notice that newly added images do not have the hover effect.
+//    Use event delegation so these handlers are attached to programmatically created images
+$images.on('mouseenter', function() {
+  $(this).addClass('active');
+  $(this).siblings().removeClass('active');
 });
+$images.on('mouseleave', function() {
+  $(this).removeClass('active');
+});
+
+
+
+
+// PART 3 - Attaching Multiple Handlers
+// 1. combine the handlers above

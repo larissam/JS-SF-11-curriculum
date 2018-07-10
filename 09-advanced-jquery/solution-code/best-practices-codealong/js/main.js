@@ -10,36 +10,34 @@ const images = {
   bear: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Kamchatka_Brown_Bear_near_Dvuhyurtochnoe_on_2015-07-23.png/1200px-Kamchatka_Brown_Bear_near_Dvuhyurtochnoe_on_2015-07-23.png'
 };
 
-$(function() {
-  const $gallery = $('.gallery');
-  const $buttons = $('#animalsList li');
-  const $images = $('.image');
+const $gallery = $('.gallery');
+const $buttons = $('#animalsList li');
+const $images = $('.image');
 
-  // PART 1 - Chaining
-  // 1. use chaining
-  $buttons.on('click', function(){
-    const $animal = $(this);
-    const id = $animal.attr('id');
+// PART 1 - Chaining
+// 1. use chaining
+$buttons.on('click', function(){
+  const $animal = $(this);
+  const id = $animal.attr('id');
 
-    $animal.addClass('showing');
+  $animal.addClass('showing');
 
-    const $newTile = $('<div>').addClass('image');
-    const $newImage = $('<img>').attr('src', images[id]).addClass('animal');
-    const $caption = $('<p>').text(id);
+  const $newTile = $('<div>').addClass('image');
+  const $newImage = $('<img>').attr('src', images[id]).addClass('animal');
+  const $caption = $('<p>').text(id);
 
-    $newTile.append($caption);
-    $newTile.append($newImage);
-    $gallery.append($newTile);
-  })
+  $newTile.append($caption);
+  $newTile.append($newImage);
+  $gallery.append($newTile);
+})
 
-  // PART 2 - Event Delegation
-  // 1. use event delegation so these handlers are attached to programmatically created images
-  // PART 3 - Attaching Multiple Handlers
-  // 1. combine the handlers above
-  $gallery.on('mouseenter', '.image', function() {
-    $(this).addClass('active');
-    $(this).siblings().removeClass('active');
-  }).on('mouseleave', '.image', function() {
-    $(this).removeClass('active');
-  });
+// PART 2 - Event Delegation
+// 1. use event delegation so these handlers are attached to programmatically created images
+// PART 3 - Attaching Multiple Handlers
+// 1. combine the handlers above
+$gallery.on('mouseenter', '.image', function() {
+  $(this).addClass('active');
+  $(this).siblings().removeClass('active');
+}).on('mouseleave', '.image', function() {
+  $(this).removeClass('active');
 });

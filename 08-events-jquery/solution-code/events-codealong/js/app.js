@@ -1,10 +1,6 @@
-// create event listener for when the page loads
-window.addEventListener('load', function() {
-  let mainHeading = document.createElement("h1");
-  let headingText = document.createTextNode("Reminders");
-  mainHeading.appendChild(headingText); 
-  document.querySelector('header').appendChild(mainHeading);
-}, false);
+let mainHeading = document.createElement("h1");
+mainHeading.textContent = "Reminders";
+document.querySelector('header').appendChild(mainHeading);
 
 // create references to 3 DOM elements our code will use
 const addButton = document.querySelector('#addReminder');

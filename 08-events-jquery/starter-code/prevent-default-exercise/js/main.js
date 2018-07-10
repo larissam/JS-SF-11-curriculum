@@ -7,16 +7,16 @@ Write code to enhance the favorites list in the following ways:
 */
 
 // STEP 1
-// Create a variable that references the submit button element in the DOM.
+// Create a variable that equals the submit button element in the DOM.
 
 // STEP 2
-// Add an event listener to the element you selected in the previous step. Your event listener should listen for the click event, and should do the following:
-// - prevent the default action (submitting the form and refreshing the page)
-// - create a new list item
-// - create a new text node with a value equal to the value the user typed in the input box (use the `value` property of the input box element)
-// - append the new text node to the list item element
-// - append the new list item to the unordered list in the DOM
-// - clear the input box   (Hint: the `value` property of the input box, before anyone types in it, is an empty string.)
+// Add an event listener to the submit button you selected in the previous step. 
+// When the user clicks on the submit button, you should: 
+    // - prevent browser from doing the default action (submitting the form and refreshing the page)
+    // - create a new list item
+    // - set its value to be whatever the user typed in the input box (use the `value` property)
+    // - append the new list item to the unordered list in the DOM
+    // - clear the input box   (Hint: the `value` property of the input box, before anyone types in it, is an empty string.)
 
 
 

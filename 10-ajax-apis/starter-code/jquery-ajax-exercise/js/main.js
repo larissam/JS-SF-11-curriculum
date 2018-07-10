@@ -24,13 +24,32 @@
 //    data for the location they specify 
 //    (Uncomment out the existing form code in index.html as marked).
 
-'use strict';
 
 function kelvinToFahrenheit(temp) {
    return (temp - 273.15) * 1.8 + 32;
 }
 
 const weatherUrl = 'http://api.openweathermap.org/data/2.5/weather';
-const apiKey = '';
+const apiKey = '2e1d4c7c2deb644196be34cc6c51bf78';
 
 // your code here
+// $.get(weatherUrl, {
+//     lat: 35,
+//     lon: 139,
+//     appid: apiKey
+// }, function(response){
+//     console.log('response: ', response);
+// })
+
+// $.get('http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&apiKey=2e1d4c7c2deb644196be34cc6c51bf78', function(response){
+//     console.log('response: ', response);
+// })
+
+const newsUrl = 'https://newsapi.org/v2/top-headlines';
+$.get(newsUrl, {
+    country: 'us',
+    pageSize: 5,
+    apiKey: 'dd591ea74bd0486ea58d22ea637a0b4e'
+}, function(response){
+    console.log('response: ', response);
+})

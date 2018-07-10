@@ -13,54 +13,51 @@ when it is added to the list.
 
 */
 
-//window.addEventListener('load', function() {
-$(function() {
 //  const button = document.querySelector('#new-thing-button');
-  const $button = $('#new-thing-button');
+const $button = $('#new-thing-button');
 //  const thingList = document.querySelector('#fav-list');
-  const $thingList = $('#fav-list');
+const $thingList = $('#fav-list');
 //  const newThingInput = document.querySelector('#new-thing');
-  const $newThingInput = $('#new-thing');
+const $newThingInput = $('#new-thing');
 // BONUS 1:
-  //  const errorMsg = document.querySelector('#error-message');
-  const $errorMsg = $('#error-message');
+//  const errorMsg = document.querySelector('#error-message');
+const $errorMsg = $('#error-message');
 
 
 //  button.addEventListener('click', function(event) {
-  $button.on('click', function(event) {
+$button.on('click', function(event) {
     event.preventDefault();
-//    let newThing = newThingInput.value;
+    //    let newThing = newThingInput.value;
     let $newThing = $newThingInput.val();
 
     // BONUS 1:
-//    if (newThing === '') {
+    //    if (newThing === '') {
     if ($newThing === '') {
-//      errorMsg.className = 'error-text';
-      $errorMsg.removeClass('hidden');
-      $errorMsg.addClass('error-text');
-//      newThingInput.className = 'error';
-      $newThingInput.addClass('error');
-      return false;
+    //      errorMsg.className = 'error-text';
+        $errorMsg.removeClass('hidden');
+        $errorMsg.addClass('error-text');
+    //      newThingInput.className = 'error';
+        $newThingInput.addClass('error');
+        return false;
     }
 
-//    let newThingLi = document.createElement('li');
-//    let newThingText = document.createTextNode(newThing);
-//    newThingLi.appendChild(newThingText);
+    //    let newThingLi = document.createElement('li');
+    //    let newThingText = document.createTextNode(newThing);
+    //    newThingLi.appendChild(newThingText);
     let $newThingLi = $('<li>').text($newThing);
-//    thingList.appendChild(newThingLi);
+    //    thingList.appendChild(newThingLi);
     $thingList.append($newThingLi);
-//    newThingInput.value = "";
+    //    newThingInput.value = "";
     $newThingInput.val('');
-// BONUS 1:
-//    errorMsg.className = 'hidden';
+    // BONUS 1:
+    //    errorMsg.className = 'hidden';
     $errorMsg.removeClass('error-text');
     $errorMsg.addClass('hidden');
-//    newThingInput.className = '';
+    //    newThingInput.className = '';
     $newThingInput.removeClass('error');
     //  }, false);
-  });
-//}, false);
 });
+//}, false);
 
 
 

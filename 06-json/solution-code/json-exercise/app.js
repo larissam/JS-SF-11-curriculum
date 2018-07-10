@@ -1,5 +1,3 @@
-'use strict';
-
 // JSON is a subset of the object literal notation of JavaScript; we use JSON to transfer data between programs.
 // ----  RULES ----
 // Property names must be double-quoted strings; trailing commas are forbidden.
