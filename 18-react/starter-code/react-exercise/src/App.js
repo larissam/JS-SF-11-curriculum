@@ -32,7 +32,6 @@ class App extends Component {
   }
 
   onSelectArticle(article) {
-    console.log("on select article")
     this.setState({
       selectedArticle: article
     });
@@ -40,7 +39,6 @@ class App extends Component {
 
   render() {
     const { articles, selectedArticle } = this.state;
-    console.log("state: ", selectedArticle)
     return (
       <div className="App">
         <Header
@@ -63,8 +61,7 @@ class App extends Component {
           isOpen={ !isEmpty(selectedArticle) }
           onClose={() => this.onSelectArticle({})}
           article={ selectedArticle }
-        >
-        </Modal>
+        />
       </div>
     );
   }

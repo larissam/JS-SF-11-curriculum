@@ -4,7 +4,6 @@ import './Modal.css';
 class Modal extends Component {
   render(){
     const { article } = this.props;
-    console.log("article: ", article)
     return (
       <div className={`modal ${this.props.isOpen ? 'open' : ''}`}>
         <div className="modal-close-button" onClick={this.props.onClose}>X</div>

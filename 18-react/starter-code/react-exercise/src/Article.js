@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import './Article.css';
 
-// props:
-// title
-// source
-// thumbnail
-// onClick
 class Article extends Component {
   render() {
     const { title, source, thumbnail, onClick } = this.props;
